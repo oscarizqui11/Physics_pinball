@@ -100,6 +100,7 @@ bool ModulePhysics::Start()
 		NES_Pinball_Table[55].Set(10, 38);
 		NES_Pinball_Table[56].Set(7, 48);
 		NES_Pinball_Table[57].Set(7, 67);
+
 		NES_Pinball_Table[58].Set(21, 110);
 		NES_Pinball_Table[59].Set(21, 145);
 		NES_Pinball_Table[60].Set(6, 160);
