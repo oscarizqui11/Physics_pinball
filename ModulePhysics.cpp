@@ -41,80 +41,156 @@ bool ModulePhysics::Start()
 	int diameter = SCREEN_WIDTH / 2;
 
 	// Pivot 0, 0
-	b2Vec2 NES_Pinball_Table[67];
-		NES_Pinball_Table[0].Set(54, 448);
-		NES_Pinball_Table[1].Set(2, 448);
-		NES_Pinball_Table[2].Set(2, 0);
-		NES_Pinball_Table[3].Set(170, 0);
-		NES_Pinball_Table[4].Set(170, 448);
-		NES_Pinball_Table[5].Set(102, 448);
-		NES_Pinball_Table[6].Set(149, 401);
-		NES_Pinball_Table[7].Set(149, 343);
-		NES_Pinball_Table[8].Set(135, 328);
-		NES_Pinball_Table[9].Set(142, 320);
-		NES_Pinball_Table[10].Set(142, 256);
-		NES_Pinball_Table[11].Set(149, 243);
-		NES_Pinball_Table[12].Set(149, 236);
-		NES_Pinball_Table[13].Set(146, 232);
-		NES_Pinball_Table[14].Set(134, 232);
-		NES_Pinball_Table[15].Set(127, 218);
-		NES_Pinball_Table[16].Set(126, 192);
-		NES_Pinball_Table[17].Set(119, 184);
-		NES_Pinball_Table[18].Set(118, 176);
-		NES_Pinball_Table[19].Set(130, 165);
-		NES_Pinball_Table[20].Set(138, 172);
-		NES_Pinball_Table[21].Set(145, 172);
-		NES_Pinball_Table[22].Set(149, 168);
-		NES_Pinball_Table[23].Set(149, 159);
-		NES_Pinball_Table[24].Set(134, 144);
-		NES_Pinball_Table[25].Set(134, 131);
-		NES_Pinball_Table[26].Set(139, 129);
-		NES_Pinball_Table[27].Set(144, 124);
-		NES_Pinball_Table[28].Set(147, 116);
-		NES_Pinball_Table[29].Set(147, 68);
-		NES_Pinball_Table[30].Set(142, 56);
-		NES_Pinball_Table[31].Set(138, 52);
-		NES_Pinball_Table[32].Set(130, 49);
-		NES_Pinball_Table[33].Set(120, 49);
-		NES_Pinball_Table[34].Set(114, 52);
-		NES_Pinball_Table[35].Set(110, 56);
-		NES_Pinball_Table[36].Set(102, 56);
-		NES_Pinball_Table[37].Set(101, 41);
-		NES_Pinball_Table[38].Set(117, 25);
-		NES_Pinball_Table[39].Set(129, 25);
-		NES_Pinball_Table[40].Set(140, 30);
-		NES_Pinball_Table[41].Set(146, 39);
-		NES_Pinball_Table[42].Set(152, 55);
-		NES_Pinball_Table[43].Set(152, 416);
-		NES_Pinball_Table[44].Set(166, 416);
-		NES_Pinball_Table[45].Set(166, 54);
-		NES_Pinball_Table[46].Set(163, 40);
-		NES_Pinball_Table[47].Set(158, 29);
-		NES_Pinball_Table[48].Set(154, 23);
-		NES_Pinball_Table[49].Set(146, 16);
-		NES_Pinball_Table[50].Set(131, 9);
-		NES_Pinball_Table[51].Set(40, 9);
-		NES_Pinball_Table[52].Set(25, 17);
-		NES_Pinball_Table[53].Set(18, 24);
-		NES_Pinball_Table[54].Set(14, 30);
-		NES_Pinball_Table[55].Set(10, 38);
-		NES_Pinball_Table[56].Set(7, 48);
-		NES_Pinball_Table[57].Set(7, 67);
+	/*b2Vec2 NES_Pinball_Table[67];
+		NES_Pinball_Table[0].Set(54.0f, 448.0f);
+		NES_Pinball_Table[1].Set(2.0f, 448.0f);
+		NES_Pinball_Table[2].Set(2.0f, 0.0f);
+		NES_Pinball_Table[3].Set(170.0f, 0.0f);
+		NES_Pinball_Table[4].Set(170.0f, 448.0f);
+		NES_Pinball_Table[5].Set(102.0f, 448.0f);
+		NES_Pinball_Table[6].Set(149.0f, 401.0f);
+		NES_Pinball_Table[7].Set(149.0f, 343.0f);
+		NES_Pinball_Table[8].Set(135.0f, 328.0f);
+		NES_Pinball_Table[9].Set(142.0f, 320.0f);
+		NES_Pinball_Table[10].Set(142.0f, 256.0f);
+		NES_Pinball_Table[11].Set(149.0f, 243.0f);
+		NES_Pinball_Table[12].Set(149.0f, 236.0f);
+		NES_Pinball_Table[13].Set(146.0f, 232.0f);
+		NES_Pinball_Table[14].Set(134.0f, 232.0f);
+		NES_Pinball_Table[15].Set(127.0f, 218.0f);
+		NES_Pinball_Table[16].Set(126.0f, 192.0f);
+		NES_Pinball_Table[17].Set(119.0f, 184.0f);
+		NES_Pinball_Table[18].Set(118.0f, 176.0f);
+		NES_Pinball_Table[19].Set(130.0f, 165.0f);
+		NES_Pinball_Table[20].Set(138.0f, 172.0f);
+		NES_Pinball_Table[21].Set(145.0f, 172.0f);
+		NES_Pinball_Table[22].Set(149.0f, 168.0f);
+		NES_Pinball_Table[23].Set(149.0f, 159.0f);
+		NES_Pinball_Table[24].Set(134.0f, 144.0f);
+		NES_Pinball_Table[25].Set(134.0f, 131.0f);
+		NES_Pinball_Table[26].Set(139.0f, 129.0f);
+		NES_Pinball_Table[27].Set(144.0f, 124.0f);
+		NES_Pinball_Table[28].Set(147.0f, 116.0f);
+		NES_Pinball_Table[29].Set(147.0f, 68.0f);
+		NES_Pinball_Table[30].Set(142.0f, 56.0f);
+		NES_Pinball_Table[31].Set(138.0f, 52.0f);
+		NES_Pinball_Table[32].Set(130.0f, 49.0f);
+		NES_Pinball_Table[33].Set(120.0f, 49.0f);
+		NES_Pinball_Table[34].Set(114.0f, 52.0f);
+		NES_Pinball_Table[35].Set(110.0f, 56.0f);
+		NES_Pinball_Table[36].Set(102.0f, 56.0f);
+		NES_Pinball_Table[37].Set(101.0f, 41.0f);
+		NES_Pinball_Table[38].Set(117.0f, 25.0f);
+		NES_Pinball_Table[39].Set(129.0f, 25.0f);
+		NES_Pinball_Table[40].Set(140.0f, 30.0f);
+		NES_Pinball_Table[41].Set(146.0f, 39.0f);
+		NES_Pinball_Table[42].Set(152.0f, 55.0f);
+		NES_Pinball_Table[43].Set(152.0f, 416.0f);
+		NES_Pinball_Table[44].Set(166.0f, 416.0f);
+		NES_Pinball_Table[45].Set(166.0f, 54.0f);
+		NES_Pinball_Table[46].Set(163.0f, 40.0f);
+		NES_Pinball_Table[47].Set(158.0f, 29.0f);
+		NES_Pinball_Table[48].Set(154.0f, 23.0f);
+		NES_Pinball_Table[49].Set(146.0f, 16.0f);
+		NES_Pinball_Table[50].Set(131.0f, 9.0f);
+		NES_Pinball_Table[51].Set(40.0f, 9.0f);
+		NES_Pinball_Table[52].Set(25.0f, 17.0f);
+		NES_Pinball_Table[53].Set(18.0f, 24.0f);
+		NES_Pinball_Table[54].Set(14.0f, 30.0f);
+		NES_Pinball_Table[55].Set(10.0f, 38.0f);
+		NES_Pinball_Table[56].Set(7.0f, 48.0f);
+		NES_Pinball_Table[57].Set(7.0f, 67.0f);
+		NES_Pinball_Table[58].Set(21.0f, 110.0f);
+		NES_Pinball_Table[59].Set(21.0f, 145.0f);
+		NES_Pinball_Table[60].Set(6.0f, 160.0f);
+		NES_Pinball_Table[61].Set(6.0f, 233.0f);
+		NES_Pinball_Table[62].Set(14.0f, 255.0f);
+		NES_Pinball_Table[63].Set(14.0f, 321.0f);
+		NES_Pinball_Table[64].Set(22.0f, 328.0f);
+		NES_Pinball_Table[65].Set(6.0f, 343.0f);
+		NES_Pinball_Table[66].Set(6.0f, 401.0f);
+		*/
+	int NES_Pinball_Table[134]{
+	54, 448,
+	2, 448,
+	2, 0,
+	170, 0,
+	170, 448,
+	102, 448,
+	149, 401,
+	149, 343,
+	135, 328,
+	142, 320,
+	142, 256,
+	149, 243,
+	149, 236,
+	146, 232,
+	134, 232,
+	127, 218,
+	126, 192,
+	119, 184,
+	118, 176,
+	130, 165,
+	138, 172,
+	145, 172,
+	149, 168,
+	149, 159,
+	134, 144,
+	134, 131,
+	139, 129,
+	144, 124,
+	147, 116,
+	147, 68,
+	142, 56,
+	138, 52,
+	130, 49,
+	120, 49,
+	114, 52,
+	110, 56,
+	102, 56,
+	101, 41,
+	117, 25,
+	129, 25,
+	140, 30,
+	146, 39,
+	152, 55,
+	152, 416,
+	166, 416,
+	166, 54,
+	163, 40,
+	158, 29,
+	154, 23,
+	146, 16,
+	131, 9,
+	40, 9,
+	25, 17,
+	18, 24,
+	14, 30,
+	10, 38,
+	7, 48,
+	7, 67,
+	21, 110,
+	21, 145,
+	6, 160,
+	6, 233,
+	14, 255,
+	14, 321,
+	22, 328,
+	6, 343,
+	6, 401,
+	};
 
-		NES_Pinball_Table[58].Set(21, 110);
-		NES_Pinball_Table[59].Set(21, 145);
-		NES_Pinball_Table[60].Set(6, 160);
-		NES_Pinball_Table[61].Set(6, 233);
-		NES_Pinball_Table[62].Set(14, 255);
-		NES_Pinball_Table[63].Set(14, 321);
-		NES_Pinball_Table[64].Set(22, 328);
-		NES_Pinball_Table[65].Set(6, 343);
-		NES_Pinball_Table[66].Set(6, 401);
+	for (int i = 0; i < 134; i++)
+	{
+		NES_Pinball_Table[i] *= 2;
+	}
 
-	//pinball.type = b2_staticBody;
+	pinball.add(App->physics->CreateChain(0, 0, NES_Pinball_Table, 134));
 
-	b2ChainShape chain;
-	chain.CreateChain(NES_Pinball_Table, 67);
+
+	//b2ChainShape chain;
+	
+	//chain.CreateLoop(NES_Pinball_Table, 67);
 
 	
 	b2BodyDef body;
@@ -232,7 +308,7 @@ PhysBody* ModulePhysics::CreateRectangleSensor(int x, int y, int width, int heig
 PhysBody* ModulePhysics::CreateChain(int x, int y, int* points, int size)
 {
 	b2BodyDef body;
-	body.type = b2_dynamicBody;
+	body.type = b2_staticBody;
 	body.position.Set(PIXEL_TO_METERS(x), PIXEL_TO_METERS(y));
 
 	b2Body* b = world->CreateBody(&body);

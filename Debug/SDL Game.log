@@ -1,10 +1,10 @@
 ﻿  ModulePhysics.cpp
 c:\users\oscar\documents\github\physics_pinball\modulephysics.cpp(40): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\oscar\documents\github\physics_pinball\modulephysics.cpp(198): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\oscar\documents\github\physics_pinball\modulephysics.cpp(199): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\oscar\documents\github\physics_pinball\modulephysics.cpp(242): warning C4018: '<': no coinciden signed/unsigned
-c:\users\oscar\documents\github\physics_pinball\modulephysics.cpp(423): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\oscar\documents\github\physics_pinball\modulephysics.cpp(424): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
-c:\users\oscar\documents\github\physics_pinball\modulephysics.cpp(430): warning C4244: 'return': conversión de 'float32' a 'int'; posible pérdida de datos
+c:\users\oscar\documents\github\physics_pinball\modulephysics.cpp(275): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\oscar\documents\github\physics_pinball\modulephysics.cpp(276): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+c:\users\oscar\documents\github\physics_pinball\modulephysics.cpp(319): warning C4018: '<': no coinciden signed/unsigned
+c:\users\oscar\documents\github\physics_pinball\modulephysics.cpp(500): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\oscar\documents\github\physics_pinball\modulephysics.cpp(501): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\oscar\documents\github\physics_pinball\modulephysics.cpp(507): warning C4244: 'return': conversión de 'float32' a 'int'; posible pérdida de datos
 c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.11.25503\include\cmath(113): warning C4577: si se usa 'noexcept' sin ningún modo de control de excepciones especificado, la finalización de la excepción no está garantizada. Especifique /EHsc
   SDL Game.vcxproj -> C:\Users\oscar\Documents\GitHub\Physics_pinball\Debug\2D Physics - class 4.exe
