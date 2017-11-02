@@ -1,0 +1,10 @@
+﻿  ModulePhysics.cpp
+ModulePhysics.cpp(40): warning C4244: 'inicializando': conversión de 'float' a 'int'; posible pérdida de datos
+ModulePhysics.cpp(114): error C2297: '*': no es válido; el operando derecho es de tipo 'int [134]'
+ModulePhysics.cpp(114): error C2660: 'ModulePhysics::CreateChain': la función no acepta 3 argumentos
+ModulePhysics.cpp(196): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+ModulePhysics.cpp(197): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+ModulePhysics.cpp(240): warning C4018: '<': no coinciden signed/unsigned
+ModulePhysics.cpp(421): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+ModulePhysics.cpp(422): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+ModulePhysics.cpp(428): warning C4244: 'return': conversión de 'float32' a 'int'; posible pérdida de datos
