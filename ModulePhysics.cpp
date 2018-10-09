@@ -185,18 +185,19 @@ bool ModulePhysics::Start()
 		NES_Pinball_Table[i] *= 2;
 	}
 
-	pinball.add(App->physics->CreateChain(0, 0, NES_Pinball_Table, 134));
+	pinball.add(CreateChain(0, 0, NES_Pinball_Table, 134));
 
 
 	//b2ChainShape chain;
 	
 	//chain.CreateLoop(NES_Pinball_Table, 67);
-
 	
-	b2BodyDef body;
-	body.type = b2_staticBody;
-	body.position.Set(PIXEL_TO_METERS(x), PIXEL_TO_METERS(y));
+	muelle.add(CreateRectangle(159 * 2, 805, 25, 10));
+	
+	b2Vec2 dockAxis(0.0f, 1.0f);
+	dock.Initialize(dock.bodyA, dock.bodyB, dock.bodyA->GetWorldCenter(), dockAxis);
 
+	/*
 	b2Body* big_ball = world->CreateBody(&body);
 
 	b2ChainShape shape;
@@ -205,7 +206,7 @@ bool ModulePhysics::Start()
 
 	b2FixtureDef fixture;
 	fixture.shape = &shape;
-	//big_ball->CreateFixture(&fixture);
+	//big_ball->CreateFixture(&fixture);*/
 
 	return true;
 }
@@ -256,8 +257,9 @@ PhysBody* ModulePhysics::CreateCircle(int x, int y, int radius)
 PhysBody* ModulePhysics::CreateRectangle(int x, int y, int width, int height)
 {
 	b2BodyDef body;
-	body.type = b2_dynamicBody;
+	body.type = b2_staticBody;
 	body.position.Set(PIXEL_TO_METERS(x), PIXEL_TO_METERS(y));
+	//body.gravityScale = 0.0f;
 
 	b2Body* b = world->CreateBody(&body);
 	b2PolygonShape box;

@@ -55,6 +55,8 @@ private:
 	bool debug;
 	b2World* world;
 	b2MouseJoint* mouse_joint;
+	b2PrismaticJointDef dock;
 	b2Body* ground;
 	p2List<PhysBody*> pinball;
+	p2List<PhysBody*> muelle;
 };
